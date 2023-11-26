@@ -29,7 +29,7 @@ const Mainmenu = () => {
             path={item.path}
             classnames={classnames({
               'bg-indigo-100 font-semibold': currentPath === item.path,
-              '': currentPath !== item.path,
+              'text-black': currentPath !== item.path,
               'hover:text-black hover:bg-indigo-100': true,
             })}
           />
