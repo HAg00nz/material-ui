@@ -1,7 +1,22 @@
-import React from 'react'
+'use client'
+import { cn } from '@/lib/utils'
+import Link from 'next/link'
 
-const MenuItem = () => {
-  return <div className='w-full bg-cyan-500 p-5'>MenuItem</div>
+const MenuItem = ({
+  title,
+  path,
+  classnames,
+}: {
+  title: string
+  path: string
+  classnames: string
+}) => {
+  console.log(classnames)
+  return (
+    <Link href={path}>
+      <div className={cn('p-3', classnames)}>{title}</div>
+    </Link>
+  )
 }
 
 export default MenuItem
